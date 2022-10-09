@@ -1,0 +1,71 @@
+@mixin sphere($size, $blur) {
+
+  height: $size;
+  width: $size;
+  background-color: $white;
+  filter: blur($blur);
+  border-radius: 50%;
+  position: relative;
+  top: 50px;
+  transform-origin: 20% 40%;
+  animation: loopInfinite 20s linear infinite;
+
+  &:hover {
+    background-color: $purple;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+@mixin position($top, $left) {
+
+  position: absolute;
+  top: $top;
+  left: $left;
+  z-index: 2;
+}
+
+.sphere {
+  @include sphere(50px, 4.0px);
+}
+
+.sphere2 {
+  @include sphere(80px, 3.0px);
+}
+
+.position-first {
+  @include position(30vh, 10vw);
+}
+
+.position-seconde {
+  @include position(10vh, 70vw);
+}
+
+.position-third {
+  @include position(80vh, 50vw);
+}
+
+.position-fourth {
+  @include position(65vh, 30vw);
+}
+
+.position-fifth {
+  @include position(20vh, 60vw);
+}
+
+.position-sixth {
+  @include position(30vh, 20vw);
+}
+
+.position-seventh {
+  @include position(85vh, 80vw);
+}
+
+.position-eight {
+  @include position(55vh, 70vw);
+}
+
+@keyframes loopInfinite {
+  to {
+    transform: rotate(360deg);
+  }
+}

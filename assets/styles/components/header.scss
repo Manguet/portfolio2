@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #menu {
+
+    cursor: pointer;
+    z-index: 14;
+
+    div{
+      height: 2px;
+      width: 50px;
+      background-color: $white;
+      border-radius: 7px;
+      filter: drop-shadow(5px 5px 15px $purple);
+    }
+
+    #mobil-line {
+      margin: 10px 0px;
+    }
+
+    &:hover {
+
+      div {
+        background-color: $purple;
+      }
+
+      #mobil-line {
+        width: 40px;
+        transition: 0.3s width ease-in-out;
+      }
+    }
+  }
+
+  #logo  {
+    z-index: 14;
+
+    img {
+      height: 50px;
+    }
+  }
+}

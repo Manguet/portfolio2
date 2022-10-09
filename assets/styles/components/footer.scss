@@ -1,0 +1,33 @@
+footer {
+
+  position: fixed;
+  bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: calc(100% - 66px);
+
+  .footer-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .horizontal-line {
+    height: 1px;
+    width: calc(100% - 180px);
+    background-color: $white;
+    margin-bottom: 15px;
+
+    &:hover {
+      background-color: $purple;
+      transition: color 0.3s ease-in-out;
+      filter: blur(0.4px);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#my-name {
+  width: 100%;
+  position: absolute;
+  top: calc(40% - (57px + 2.8em));
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: $white;
+    font-size: 4.5em;
+    font-family: $titles;
+    filter: drop-shadow(-0.0px -0.0px 1px $black) blur(0.6px);
+    margin: 0px;
+  }
+
+  .hoverTitle:hover {
+    color: $purple;
+    cursor: pointer;
+    animation: icon3d 2s infinite;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 15vh;
+    line-height: 1.8;
+    padding: 10px 30px;
+    color: $white;
+  }
+}

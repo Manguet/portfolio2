@@ -1,0 +1,80 @@
+@mixin baseMobileLine {
+  height: 1px;
+  width: 100vw;
+  background-color: $white;
+  position: relative;
+  filter: drop-shadow(5px 5px 15px $purple);
+  z-index: 1;
+}
+
+.mobile-line1 {
+  @include baseMobileLine;
+  top: 2vh;
+  animation: rightToLeft 4s infinite linear;
+}
+
+.mobile-line2 {
+  @include baseMobileLine;
+  top: 30vh;
+  animation: rightToLeft 1s infinite linear;
+}
+
+.mobile-line3 {
+  @include baseMobileLine;
+  top: 25vh;
+  animation: rightToLeft 2s infinite linear;
+}
+
+.mobile-line4 {
+  @include baseMobileLine;
+  top: 70vh;
+  animation: rightToLeft 3s infinite linear;
+}
+
+.mobile-line5 {
+  @include baseMobileLine;
+  top: 12vh;
+  animation: rightToLeft 1.3s infinite linear;
+}
+
+.mobile-line6 {
+  @include baseMobileLine;
+  top: 43vh;
+  animation: rightToLeft 2.9s infinite linear;
+}
+
+.mobile-line7 {
+  @include baseMobileLine;
+  top: 49vh;
+  animation: rightToLeft 4.3s infinite linear;
+}
+
+.mobile-line8 {
+  @include baseMobileLine;
+  top: 87vh;
+  animation: rightToLeft 0.9s infinite linear;
+}
+
+.mobile-line9 {
+  @include baseMobileLine;
+  top: 39vh;
+  animation: rightToLeft 1.6s infinite linear;
+}
+
+.mobile-line10 {
+  @include baseMobileLine;
+  top: 62vh;
+  animation: rightToLeft 7.6s infinite linear;
+}
+
+@-webkit-keyframes rightToLeft {
+  0% {
+    left: 200vw;
+  }
+  10% {
+    left: -100vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}

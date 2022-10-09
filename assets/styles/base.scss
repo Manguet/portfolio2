@@ -1,0 +1,38 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: $main;
+  background-image: url("../../public/images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  font-size: 1.3em;
+  text-align: start;
+  text-shadow: 5px 5px 15px $purple;
+  filter: drop-shadow(5px 5px 15px $purple);
+
+  .container {
+    margin: 30px;
+    z-index: 3;
+
+    .vertical-line {
+      width: 1px;
+      height: calc(80vh - 100px);
+      background-color: $white;
+      margin-top: 23px;
+      position: relative;
+      left: calc(100% - 24px);
+
+      &:hover {
+        background-color: $purple;
+        transition: color 0.3s ease-in-out;
+        filter: blur(0.4px);
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Benjamin Manguet - {% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Benjamin Manguet">
+        <meta name="description" content="Bienvenue sur mon portfolio. Je suis développeur Web Full Stack avec une préférence notable pour le Back End. {% block description %}{% endblock %}">
+        <meta property="og:title" content="Benjamin Manguet - {% block titleog %}{% endblock %}">
+        <meta property="og:description" content="Bienvenue sur mon portfolio. Je suis développeur Web Full Stack avec une préférence notable pour le Back End. {% block descriptionog %}{% endblock %}">
+        <meta property="og:image" content="/some-image.png">
+        <meta property="og:url" content="{{ app.request.requestUri }}">
+        <meta property="og:site_name" content="Benjamin Manguet">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:alt" content="image description">
+
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+
+        {% include 'base/menu.html.twig' %}
+        {% include 'base/lines.html.twig' %}
+
+        <div class="container" data-controller="mobileSphere">
+
+            {% include 'base/header.html.twig' %}
+            {% include 'base/spheres.html.twig' %}
+
+            <div class="vertical-line"></div>
+
+            {% block body %}{% endblock %}
+
+            {% include 'base/footer.html.twig' %}
+        </div>
+    </body>
+</html>
