@@ -9,12 +9,12 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @author Benjamin Manguet <manguetbenj@gmail.com>
  */
-#[Route('/', name: 'app')]
-class DefaultController extends AbstractController
+#[Route('/learn', name: 'app_learn_')]
+class LearningController extends AbstractController
 {
-    #[Route('', '_index')]
+    #[Route('', 'index')]
     public function homepage(): Response
     {
-        return $this->render('homepage.html.twig');
+        return $this->render('learn.html.twig');
     }
 }

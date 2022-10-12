@@ -1,0 +1,7 @@
+body {
+  transition: opacity 1000ms;
+}
+
+body.turbo-loading, body.turbo-loaded {
+  opacity: .2;
+}
