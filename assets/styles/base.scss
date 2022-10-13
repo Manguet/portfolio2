@@ -42,6 +42,17 @@ body {
       justify-content: space-around;
       align-items: center;
     }
+
+    .flex-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .base-container {
+      height: 45vh;
+      width: 100%;
+    }
   }
 }
 
