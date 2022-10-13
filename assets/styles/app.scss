@@ -1,5 +1,6 @@
 @import "variables";
 @import "base";
+@import "animations";
 
 @import "elements/sphere";
 @import "elements/lines";
@@ -10,6 +11,9 @@
 @import "components/footer";
 @import "components/homepage";
 @import "components/menu";
+@import "components/scrollbar";
+
 @import "pages/learn";
+@import "pages/skills";
 
 @import "turbo/transition";

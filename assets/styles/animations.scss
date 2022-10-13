@@ -1,0 +1,58 @@
+@keyframes borderer {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    left: 200vw;
+  }
+  10% {
+    left: -100vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@keyframes loopInfinite {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes icon3d {
+  0% {
+    color: $purple;
+    filter: drop-shadow( 5px 4px 15px $purple);
+  }
+  25% {
+    color: $white;
+    filter: drop-shadow( -5px 2px 9px $white);
+  }
+  50% {
+    color: $purple;
+    filter: drop-shadow( 9px 5px 5px $purple);
+  }
+  75% {
+    color: $white;
+    filter: drop-shadow( 6px 1px 7px $white);
+  }
+  100% {
+    color: $black;
+    filter: drop-shadow( -2px 3px 9px $purple);
+  }
+}

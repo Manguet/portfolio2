@@ -32,6 +32,16 @@ body {
         filter: blur(0.4px);
       }
     }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .flex-around {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
   }
 }
 
