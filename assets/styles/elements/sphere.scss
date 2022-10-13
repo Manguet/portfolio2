@@ -64,8 +64,3 @@
   @include position(55vh, 70vw);
 }
 
-@keyframes loopInfinite {
-  to {
-    transform: rotate(360deg);
-  }
-}

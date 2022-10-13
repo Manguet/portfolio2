@@ -67,14 +67,3 @@
   animation: rightToLeft 7.6s infinite linear;
 }
 
-@-webkit-keyframes rightToLeft {
-  0% {
-    left: 200vw;
-  }
-  10% {
-    left: -100vw;
-  }
-  100% {
-    left: -100vw;
-  }
-}
