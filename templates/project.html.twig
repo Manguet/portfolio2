@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projets{% endblock %}
+{% block titleog %}Projets{% endblock %}
+{% block description %}Découvrez mon univers par mes projets{% endblock %}
+{% block descriptionog %}Découvrez mon univers par mes projets{% endblock %}
+
+{% block body %}
+    <div id="project">
+        <h1 data-controller="hoverTitle">Mes Projets</h1>
+        <div class="flex-around">
+            <div>
+                <h2>Créa'Ribo</h2>
+                <p>
+                    Site web en PHP 8.1 et Symfony 6.1
+                    <br>
+                    Site contenant une boutique en ligne et de nombreuses features.
+                    <br>
+                    La demande client était à la base de réaliser un site pour ses artworks.
+                </p>
+            </div>
+            <img class="project-image"
+                 src="{{ asset('images/crearibo.jpg') }}"
+                 alt="crea-ribo"
+                 title="Site réalisé pour Créa'Ribo"
+            >
+        </div>
+    </div>
+{% endblock %}
