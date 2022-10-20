@@ -28,6 +28,18 @@
   }
 }
 
+@keyframes leftToRight {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 @keyframes loopInfinite {
   to {
     transform: rotate(360deg);
@@ -54,5 +66,27 @@
   100% {
     color: $black;
     filter: drop-shadow( -2px 3px 9px $purple);
+  }
+}
+
+@keyframes deleteBackground {
+  0% {
+    background-image: url("../../public/images/wallpaper.jpg");
+    opacity: 100%;
+  }
+  25% {
+    background-image: url("../../public/images/wallpaper.jpg");
+    opacity: 75%;
+  }
+  50% {
+    background-image: url("../../public/images/wallpaper.jpg");
+    opacity: 25%;
+  }
+  75% {
+    background-image: url("../../public/images/wallpaper.jpg");
+    opacity: 10%;
+  }
+  100% {
+    background-image: none;
   }
 }

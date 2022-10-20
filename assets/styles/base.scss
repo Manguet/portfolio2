@@ -14,13 +14,17 @@ body {
   text-shadow: 5px 5px 15px $purple;
   filter: drop-shadow(5px 5px 15px $purple);
 
+  .hidden {
+    display: none;
+  }
+
   .container {
     margin: 30px;
     z-index: 3;
 
     .vertical-line {
       width: 1px;
-      height: calc(80vh - 100px);
+      height: calc(78vh - 100px);
       background-color: $white;
       margin-top: 23px;
       position: relative;
@@ -54,6 +58,28 @@ body {
       width: 100%;
     }
   }
+
+  button {
+    padding: 10px 25px;
+    background-color: $purple;
+    color: $black;
+    cursor: pointer;
+    border-radius: 12px;
+    filter: drop-shadow(5px 5px 15px $purple);
+    transition: color 0.4s linear;
+    border: 1px solid $purple;
+
+    &:hover {
+      color: $white;
+      box-shadow: 0 0 15px $purple;
+      text-shadow: 0 0 15px $purple;
+    }
+  }
 }
 
+.dark {
+  background-color: $black;
+  transition: background-color 2.3s linear;
+  animation: deleteBackground 2s linear forwards;
+}
 
