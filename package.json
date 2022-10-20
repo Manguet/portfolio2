@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "jquery": "^3.6.1",
-        "sass-lint": "^1.13.1"
+        "sass-lint": "^1.13.1",
+        "stimulus-use": "^0.50.0"
     }
 }

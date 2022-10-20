@@ -1,0 +1,53 @@
+<div class="contact-modal hidden">
+    <div class="close" data-controller="contact">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div id="my-modal">
+        <div class="form-container">
+            <div class="wrapper">
+                <h3>Envoyer un message</h3>
+
+                {{ render(controller('App\\Controller\\DefaultController::contact')) }}
+            </div>
+        </div>
+        <div id="contact-description">
+            <h3>Pour me contacter</h3>
+
+            <div class="contact-text">
+                <i class="fa-solid fa-location-dot icon"></i>
+                <p>
+                    <span class="title-contact">Adresse</span>
+                    <br>
+                    1bis, Rue des prés carrés
+                    <br>
+                    17 220 SAINTE-SOULLE
+                    <br>
+                    FRANCE
+                </p>
+            </div>
+
+            <div class="contact-text">
+                <i class="fa-solid fa-phone icon"></i>
+                <p>
+                    <span class="title-contact">Téléphone</span>
+                    <br>
+                    06.37.50.50.98
+                </p>
+            </div>
+
+            <div class="contact-text">
+                <i class="fa-regular fa-clock icon"></i>
+                <p>
+                    <span class="title-contact">Du lundi au vendredi</span>
+                    <br>
+                    De 17h30 à 20h00
+                    <br>
+                    <span class="title-contact margin-time">Le samedi</span>
+                    <br>
+                    De 11h00 à 20h00
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

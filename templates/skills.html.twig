@@ -6,33 +6,157 @@
 {% block descriptionog %}La totalité de mes compétences{% endblock %}
 
 {% block body %}
-    <div id="skills">
+    <div id="skills" data-controller="skills">
         <h1 data-controller="hoverTitle">Mes Compétences</h1>
 
         <div class="flex-around full-width">
-            <h2 class="active">Hard Skills</h2>
-            <h2>Soft Skills</h2>
-            <h2>Other Skills</h2>
+            <h2 id="hard" class="active">Hard Skills</h2>
+            <h2 id="soft">Soft Skills</h2>
+            <h2 id="other">Other Skills</h2>
         </div>
 
         <div id="current-skills">
             <div id="skills-logo">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-                <img class="logo" src="https://www.arealme.com/logo.png" alt="logo" title="Logo de Benjamin Manguet">
-            </div>
-            <div class="separator"></div>
-            <div id="skills-detail">
-                <h3>Title</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
-                </p>
+                <div id="clear-skills"></div>
+
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/html-logo.png') }}" alt="logo-html" title="HTML">
+                    <h3>HTML</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/css-logo.png') }}" alt="logo-css" title="CSS">
+                    <h3>CSS</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/bootstrap-logo.png') }}" alt="logo-bootstrap" title="Bootstrap">
+                    <h3>Bootstrap</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/js-logo.png') }}" alt="logo-js" title="Javascript">
+                    <h3>Javascript</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/jquery-logo.png') }}" alt="logo-jquery" title="JQuery">
+                    <h3>JQuery</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/react-logo.png') }}" alt="logo-react" title="React">
+                    <h3>React</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/php-logo.png') }}" alt="logo-php" title="PHP">
+                    <h3>PHP</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/symfony-logo.png') }}" alt="logo-symfony" title="Symfony">
+                    <h3>Symfony</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/wordpress-logo.png') }}" alt="logo-wordpress" title="Wordpress">
+                    <h3>Wordpress</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/mysql-logo.png') }}" alt="logo-mysql" title="MySQL">
+                    <h3>MySQL</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/mongodb-logo.png') }}" alt="logo-mysql" title="MongoDB">
+                    <h3>MongoDB</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/elastic-logo.webp') }}" alt="logo-elastic" title="ElasticSearch">
+                    <h3>ElasticSearch</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/git-logo.png') }}" alt="logo-git" title="Git">
+                    <h3>Git</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/linux-logo.png') }}" alt="logo-linux" title="Linux">
+                    <h3>Linux</h3>
+                </div>
+                <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/windows-logo.png') }}" alt="logo-windows" title="Windows">
+                    <h3>Windows</h3>
+                </div>
+
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/attitude-logo.png') }}" alt="logo-attitude" title="Réactivité">
+                    <h3>Réactivité</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/cleancode-logo.png') }}" alt="logo-clean-code" title="Clean Code">
+                    <h3>Clean Code</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/communication-logo.png') }}" alt="logo-communication" title="Communication">
+                    <h3>Communication</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/connaissance-logo.png') }}" alt="logo-connaissance" title="Curiosité">
+                    <h3>Curiosité</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/creativite-logo.png') }}" alt="logo-creativite" title="Créativité">
+                    <h3>Créativité</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/equilibre-logo.png') }}" alt="logo-self-controle" title="Self Control">
+                    <h3>Self Control</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/evolution-logo.png') }}" alt="logo-evolution" title="Auto Formation">
+                    <h3>Auto Formation</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/multitache-logo.png') }}" alt="logo-multitache" title="Multitâches">
+                    <h3>Multitâches</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/selflearning-logo.png') }}" alt="logo-clean-code" title="Self Learning">
+                    <h3>Self Learning</h3>
+                </div>
+                <div class="flex-column soft flex hidden">
+                    <img class="logo" src="{{ asset('images/teamwork-logo.png') }}" alt="logo-teamwork" title="Travail d'équipe">
+                    <h3>Travail d'équipe</h3>
+                </div>
+
+                <div class="flex-column other flex hidden">
+                    <img class="logo" src="{{ asset('images/animal-logo.png') }}" alt="logo-animal" title="Animaux">
+                    <h3>Animaux</h3>
+                </div>
+                <div class="flex-column other flex hidden">
+                    <img class="logo" src="{{ asset('images/cinema-logo.png') }}" alt="logo-cinema" title="Cinema">
+                    <h3>Cinema</h3>
+                </div>
+                <div class="flex-column other flex hidden">
+                    <img class="logo" src="{{ asset('images/code-logo.png') }}" alt="logo-code" title="Code">
+                    <h3>Code</h3>
+                </div>
+                <div class="flex-column other flex hidden">
+                    <img class="logo" src="{{ asset('images/game-logo.png') }}" alt="logo-game" title="Gamer">
+                    <h3>Gamer</h3>
+                </div>
+                <div class="flex-column other flex hidden">
+                    <img class="logo" src="{{ asset('images/japan-logo.png') }}" alt="logo-japan" title="Japon">
+                    <h3>Japon</h3>
+                </div>
+                <div class="flex-column other flex hidden">
+                    <img class="logo" src="{{ asset('images/music-logo.png') }}" alt="logo-music" title="Musique">
+                    <h3>Musique</h3>
+                </div>
+                <div class="flex-column other flex hidden">
+                    <img class="logo" src="{{ asset('images/science-logo.png') }}" alt="logo-science" title="Science">
+                    <h3>Science</h3>
+                </div>
+                <div class="flex-column other flex hidden">
+                    <img class="logo" src="{{ asset('images/travel-logo.png') }}" alt="logo-travel" title="Voyage">
+                    <h3>Voyage</h3>
+                </div>
+
+                <div class="soft hidden bottom-right">
+                    <a target=_blank href="https://icons8.com">Icons by https://icons8.com</a>
+                </div>
             </div>
         </div>
     </div>

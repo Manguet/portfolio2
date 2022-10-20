@@ -1,0 +1,46 @@
+{{ form_start(contact) }}
+
+<div class="max-width group">
+    {{ form_label(contact.civility) }}
+    {{ form_widget(contact.civility) }}
+</div>
+
+<div class="row">
+    <div class="half-size group">
+        {{ form_label(contact.name) }}
+        {{ form_widget(contact.name) }}
+    </div>
+    <div class="half-size group">
+        {{ form_label(contact.firstname) }}
+        {{ form_widget(contact.firstname) }}
+    </div>
+</div>
+
+
+<div class="my-pleasure">
+    {{ form_widget(contact.email) }}
+</div>
+
+<div class="row">
+    <div class="half-size group">
+        {{ form_label(contact.contact) }}
+        {{ form_widget(contact.contact) }}
+    </div>
+
+    <div class="half-size group">
+        {{ form_label(contact.phone) }}
+        {{ form_widget(contact.phone) }}
+    </div>
+</div>
+
+<div class="max-width group">
+    {{ form_label(contact.favorite) }}
+    {{ form_widget(contact.favorite) }}
+</div>
+
+<div class="max-width group flex">
+    {{ form_label(contact.subject) }}
+    {{ form_widget(contact.subject) }}
+</div>
+
+{{ form_end(contact) }}
