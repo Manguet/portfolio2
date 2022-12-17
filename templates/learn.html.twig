@@ -9,26 +9,39 @@
     <div id="learn">
         <h1 data-controller="hoverTitle">Mes Formations</h1>
 
-        <div class="flex-center">
+        <div class="flex-center" data-controller="learn">
             <div id="learn-text">
-                <h2>Formation Auxiliaire Spécialisé Vétérinaire</h2>
-                <p>
-                    BORDEAUX ET FRANCE
-                    <br>
-                    Gestion des anesthésies
-                    <br>
-                    - Aide en chirurgie
-                    <br>
-                    - Préparation des blocs
-                    <br>
-                    - Soins aux hospitalisés
-                </p>
+
+                <div id="1" class="current" data-src="php">
+                    <h2>{{ 'advancedPHP'|trans }}</h2>
+                    <h3>SensioLab, Bordeaux</h3>
+                    <p>{{ 'php-learn'|trans }}</p>
+                </div>
+
+                <div id="2" class="hidden" data-src="wild">
+                    <h2>{{ 'wild'|trans }}</h2>
+                    <h3>Wild Code School, Bordeaux</h3>
+                    <p>{{ 'wildcodeshool'|trans }}</p>
+                </div>
+
+                <div id="3" class="hidden" data-src="vet">
+                    <h2>{{ 'vet'|trans }}</h2>
+                    <h3>GIPSA, Laval</h3>
+                    <p>{{ 'vet-learning'|trans }}</p>
+                </div>
+
+                <div id="4" class="hidden" data-src="biology">
+                    <h2>{{ 'biology'|trans }}</h2>
+                    <h3>{{ 'tours'|trans }}</h3>
+                    <p>{{ 'tours-learning'|trans }}</p>
+                </div>
+
                 <div class="flex-between">
-                    <i class="fa-solid fa-circle-arrow-left"></i>
-                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <i class="fa-solid fa-circle-arrow-left" id="previous" data-next="4"></i>
+                    <i class="fa-solid fa-circle-arrow-right" id="next" data-next="2"></i>
                 </div>
             </div>
-            <div id="learn-img">
+            <div id="learn-img" data-source="vet">
 
             </div>
         </div>

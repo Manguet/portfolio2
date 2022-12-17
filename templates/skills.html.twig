@@ -7,7 +7,7 @@
 
 {% block body %}
     <div id="skills" data-controller="skills">
-        <h1 data-controller="hoverTitle">Mes Compétences</h1>
+        <h1 data-controller="hoverTitle">{{ 'skills'|trans }}</h1>
 
         <div class="flex-around full-width">
             <h2 id="hard" class="active">Hard Skills</h2>
@@ -52,6 +52,10 @@
                     <h3>Symfony</h3>
                 </div>
                 <div class="flex-column hard flex">
+                    <img class="logo" src="{{ asset('images/flutter-logo.png') }}" alt="logo-flutter" title="Flutter">
+                    <h3>Flutter</h3>
+                </div>
+                <div class="flex-column hard flex">
                     <img class="logo" src="{{ asset('images/wordpress-logo.png') }}" alt="logo-wordpress" title="Wordpress">
                     <h3>Wordpress</h3>
                 </div>
@@ -81,8 +85,8 @@
                 </div>
 
                 <div class="flex-column soft flex hidden">
-                    <img class="logo" src="{{ asset('images/attitude-logo.png') }}" alt="logo-attitude" title="Réactivité">
-                    <h3>Réactivité</h3>
+                    <img class="logo" src="{{ asset('images/attitude-logo.png') }}" alt="logo-attitude" title="{{ 'Reactivity'|trans }}">
+                    <h3>{{ 'Reactivity'|trans }}</h3>
                 </div>
                 <div class="flex-column soft flex hidden">
                     <img class="logo" src="{{ asset('images/cleancode-logo.png') }}" alt="logo-clean-code" title="Clean Code">
@@ -93,37 +97,33 @@
                     <h3>Communication</h3>
                 </div>
                 <div class="flex-column soft flex hidden">
-                    <img class="logo" src="{{ asset('images/connaissance-logo.png') }}" alt="logo-connaissance" title="Curiosité">
-                    <h3>Curiosité</h3>
+                    <img class="logo" src="{{ asset('images/connaissance-logo.png') }}" alt="logo-connaissance" title="{{ 'Curiosity'|trans }}">
+                    <h3>{{ 'Curiosity'|trans }}</h3>
                 </div>
                 <div class="flex-column soft flex hidden">
-                    <img class="logo" src="{{ asset('images/creativite-logo.png') }}" alt="logo-creativite" title="Créativité">
-                    <h3>Créativité</h3>
+                    <img class="logo" src="{{ asset('images/creativite-logo.png') }}" alt="logo-creativite" title="{{ 'Creativity'|trans }}">
+                    <h3>{{ 'Creativity'|trans }}</h3>
                 </div>
                 <div class="flex-column soft flex hidden">
                     <img class="logo" src="{{ asset('images/equilibre-logo.png') }}" alt="logo-self-controle" title="Self Control">
                     <h3>Self Control</h3>
                 </div>
                 <div class="flex-column soft flex hidden">
-                    <img class="logo" src="{{ asset('images/evolution-logo.png') }}" alt="logo-evolution" title="Auto Formation">
-                    <h3>Auto Formation</h3>
+                    <img class="logo" src="{{ asset('images/evolution-logo.png') }}" alt="logo-evolution" title="{{ 'self-learning'|trans }}">
+                    <h3>{{ 'self-learning'|trans }}</h3>
                 </div>
                 <div class="flex-column soft flex hidden">
-                    <img class="logo" src="{{ asset('images/multitache-logo.png') }}" alt="logo-multitache" title="Multitâches">
-                    <h3>Multitâches</h3>
+                    <img class="logo" src="{{ asset('images/multitache-logo.png') }}" alt="logo-multitache" title="{{ 'multitask'|trans }}">
+                    <h3>{{ 'multitask'|trans }}</h3>
                 </div>
                 <div class="flex-column soft flex hidden">
-                    <img class="logo" src="{{ asset('images/selflearning-logo.png') }}" alt="logo-clean-code" title="Self Learning">
-                    <h3>Self Learning</h3>
-                </div>
-                <div class="flex-column soft flex hidden">
-                    <img class="logo" src="{{ asset('images/teamwork-logo.png') }}" alt="logo-teamwork" title="Travail d'équipe">
-                    <h3>Travail d'équipe</h3>
+                    <img class="logo" src="{{ asset('images/teamwork-logo.png') }}" alt="logo-teamwork" title="{{ 'teamwork'|trans }}">
+                    <h3>{{ 'teamwork'|trans }}</h3>
                 </div>
 
                 <div class="flex-column other flex hidden">
-                    <img class="logo" src="{{ asset('images/animal-logo.png') }}" alt="logo-animal" title="Animaux">
-                    <h3>Animaux</h3>
+                    <img class="logo" src="{{ asset('images/animal-logo.png') }}" alt="logo-animal" title="{{ 'animals'|trans }}">
+                    <h3>{{ 'animals'|trans }}</h3>
                 </div>
                 <div class="flex-column other flex hidden">
                     <img class="logo" src="{{ asset('images/cinema-logo.png') }}" alt="logo-cinema" title="Cinema">
@@ -138,24 +138,20 @@
                     <h3>Gamer</h3>
                 </div>
                 <div class="flex-column other flex hidden">
-                    <img class="logo" src="{{ asset('images/japan-logo.png') }}" alt="logo-japan" title="Japon">
-                    <h3>Japon</h3>
+                    <img class="logo" src="{{ asset('images/japan-logo.png') }}" alt="logo-japan" title="{{ 'japan'|trans }}Japon">
+                    <h3>{{ 'japan'|trans }}</h3>
                 </div>
                 <div class="flex-column other flex hidden">
-                    <img class="logo" src="{{ asset('images/music-logo.png') }}" alt="logo-music" title="Musique">
-                    <h3>Musique</h3>
+                    <img class="logo" src="{{ asset('images/music-logo.png') }}" alt="logo-music" title="{{ 'music'|trans }}Musique">
+                    <h3>{{ 'music'|trans }}</h3>
                 </div>
                 <div class="flex-column other flex hidden">
                     <img class="logo" src="{{ asset('images/science-logo.png') }}" alt="logo-science" title="Science">
                     <h3>Science</h3>
                 </div>
                 <div class="flex-column other flex hidden">
-                    <img class="logo" src="{{ asset('images/travel-logo.png') }}" alt="logo-travel" title="Voyage">
-                    <h3>Voyage</h3>
-                </div>
-
-                <div class="soft hidden bottom-right">
-                    <a target=_blank href="https://icons8.com">Icons by https://icons8.com</a>
+                    <img class="logo" src="{{ asset('images/travel-logo.png') }}" alt="logo-travel" title="{{ 'travel'|trans }}Voyage">
+                    <h3>{{ 'travel'|trans }}</h3>
                 </div>
             </div>
         </div>

@@ -60,3 +60,17 @@
 .open {
   display: block !important;
 }
+
+@media screen and (max-width: 660px) {
+  #nav {
+    svg {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  li {
+    font-size: 1em !important;
+  }
+}

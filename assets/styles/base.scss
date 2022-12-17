@@ -15,6 +15,32 @@ body {
   filter: drop-shadow(5px 5px 15px $purple);
 
   .hidden {
+    display: none !important;
+  }
+
+  .alert {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    background-color: $purple;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(5px 5px 15px $purple);
+    animation: hideAlert 0s ease-in 5s forwards;
+  }
+
+  @keyframes hideAlert {
+    to {
+      width:0;
+      height:0;
+      overflow:hidden;
+    }
+  }
+
+
+  .hidden-modal {
     display: none;
   }
 
@@ -53,6 +79,12 @@ body {
       align-items: center;
     }
 
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .base-container {
       height: 45vh;
       width: 100%;
@@ -83,3 +115,15 @@ body {
   animation: deleteBackground 2s linear forwards;
 }
 
+.version {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  font-size: 0.7em;
+}
+
+@media screen and (max-width: 500px) {
+  .vertical-line {
+    display: none !important;
+  }
+}

@@ -7,23 +7,51 @@
 
 {% block body %}
     <div id="project">
-        <h1 data-controller="hoverTitle">Mes Projets</h1>
-        <div class="flex-around">
+        <h1 data-controller="hoverTitle">{{ 'projects'|trans }}</h1>
+        <div class="flex-around" id="project-1">
             <div>
-                <h2>Créa'Ribo</h2>
-                <p>
-                    Site web en PHP 8.1 et Symfony 6.1
-                    <br>
-                    Site contenant une boutique en ligne et de nombreuses features.
-                    <br>
-                    La demande client était à la base de réaliser un site pour ses artworks.
-                </p>
+                <h2>Créa'RiBo</h2>
+                <p>{{ 'phpsf'|trans }}<br>{{ 'shop'|trans }}<br>{{ 'sell'|trans }}</p>
             </div>
-            <img class="project-image"
-                 src="{{ asset('images/crearibo.jpg') }}"
-                 alt="crea-ribo"
-                 title="Site réalisé pour Créa'Ribo"
-            >
+            <a href="https://crearibo.fr" target="_blank" rel="noreferrer">
+                <img class="project-image"
+                     src="{{ asset('images/crearibo.jpg') }}"
+                     alt="crea-ribo"
+                     title="{{ 'crearibo'|trans }}"
+                >
+            </a>
+        </div>
+        <div class="flex-around hidden" id="project-2">
+            <div>
+                <h2>Manguet</h2>
+                <p>{{ 'phpsf'|trans }}<br>{{ 'portfolio'|trans }}<br>{{ 'stimulus'|trans }}</p>
+            </div>
+            <a href="https://www.benjamin-manguet.com" target="_blank" rel="noreferrer">
+                <img class="project-image"
+                     src="{{ asset('images/manguet.png') }}"
+                     alt="manguet"
+                     title="{{ 'manguet'|trans }}"
+                >
+            </a>
+        </div>
+        <div class="flex-around hidden" id="project-3">
+            <div>
+                <h2>Baron de Lustrac</h2>
+                <p>{{ 'wordpress'|trans }}<br>{{ 'lustrac'|trans }}<br>{{ 'help-wordpress'|trans }}</p>
+            </div>
+            <a href="https://www.armagnac-baron-de-lustrac.fr" target="_blank" rel="noreferrer">
+                <img class="project-image"
+                     src="{{ asset('images/lustrac.png') }}"
+                     alt="baron-de-lustrac"
+                     title="{{ 'lustrac'|trans }}"
+                >
+            </a>
+        </div>
+
+        <div class="flex-center">
+            <button class="bottom" data-id="1" data-controller="project">
+                <i class="fa-solid fa-arrow-down"></i>
+            </button>
         </div>
     </div>
 {% endblock %}

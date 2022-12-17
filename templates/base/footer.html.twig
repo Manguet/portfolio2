@@ -1,6 +1,9 @@
 <footer>
     <div class="footer-left">
         <i class="fa-regular fa-paper-plane" data-controller="contact"></i>
+        <a href="{% if app.request.locale == 'en' %}{{ app.request.requesturi|replace({ 'en': 'fr' }) }}{% else %}{{ app.request.requesturi|replace({ 'fr': 'en' }) }}{% endif %}">
+            <i class="fa-regular fa-flag"></i>
+        </a>
         <label class="switch">
             <input type="checkbox">
             <span class="slider round" data-controller="darkmode"></span>
