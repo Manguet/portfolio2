@@ -18,13 +18,19 @@ class DefaultController extends AbstractController
 {
     public function __construct(private readonly ?MailingInterface $mailing) { }
 
-    #[Route('', '_index')]
+    #[Route('')]
+    public function indexNoLocale(): Response
+    {
+        return $this->redirectToRoute('app_index', ['_locale' => 'fr']);
+    }
+
+    #[Route('/{_locale}', '_index')]
     public function homepage(): Response
     {
         return $this->render('homepage.html.twig');
     }
 
-    #[Route('/contact', '_contact')]
+    #[Route('/{_locale}/contact', '_contact')]
     public function contact(Request $request): RedirectResponse|Response
     {
         $contact = $this->createForm(ContactType::class, null, [
@@ -39,6 +45,11 @@ class DefaultController extends AbstractController
 
             if (empty($formData['email'])) {
                 $this->mailing->sendMail($formData);
+
+                $this->addFlash(
+                    'success',
+                    'Votre message a bien été envoyé, je vous répondrai au plus vite'
+                );
             }
 
             return $this->redirect($request->headers->get('referer'));

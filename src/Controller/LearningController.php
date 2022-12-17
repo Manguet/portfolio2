@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @author Benjamin Manguet <manguetbenj@gmail.com>
  */
-#[Route('/learn', name: 'app_learn_')]
+#[Route('/{_locale}/learn', name: 'app_learn_')]
 class LearningController extends AbstractController
 {
     #[Route('', 'index')]

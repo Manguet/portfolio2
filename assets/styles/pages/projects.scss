@@ -28,4 +28,74 @@
     border-radius: 7px;
     margin-left: 50px;
   }
+
+  .bottom {
+    padding: 5px;
+    background-color: $white;
+    color: $purple;
+    cursor: pointer;
+    border-radius: 14px;
+    filter: drop-shadow(5px 5px 15px $purple);
+    transition: color 0.4s linear;
+    border: 1px solid $purple;
+    position: fixed;
+    bottom: 150px;
+    animation: fade-in-down 2s ease infinite;
+
+    svg {
+      color: $purple;
+    }
+
+    @keyframes fade-in-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &:hover {
+      color: $white;
+      box-shadow: 0 0 15px $purple;
+      text-shadow: 0 0 15px $purple;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #project {
+
+    .flex-around {
+      flex-direction: column !important;
+    }
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  #project {
+
+    width: 77% !important;
+
+    p {
+      display: none !important;
+    }
+
+    .project-image {
+      width: 50vw !important;
+      margin-left: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #project {
+
+    .project-image {
+      width: 80vw !important;
+    }
+  }
 }

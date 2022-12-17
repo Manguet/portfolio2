@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://benjamin-manguet.com</loc>
+        <lastmod>2022-12-11T19:08:58+00:00</lastmod>
+        <changefreq>always</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://benjamin-manguet.com/skills</loc>
+        <lastmod>2022-12-11T19:08:58+00:00</lastmod>
+        <changefreq>always</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://benjamin-manguet.com/learn</loc>
+        <lastmod>2022-12-11T19:08:58+00:00</lastmod>
+        <changefreq>always</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://crearibo.fr/project</loc>
+        <lastmod>2022-12-11T19:08:58+00:00</lastmod>
+        <changefreq>always</changefreq>
+        <priority>1</priority>
+    </url>
+</urlset>

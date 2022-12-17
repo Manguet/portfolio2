@@ -25,7 +25,7 @@ export default class extends Controller {
             if ($(this).attr('id') === 'soft') {
                 $('.hard').addClass('hidden')
                 $('.soft').removeClass('hidden')
-                $('.other').addClass('hidden')
+                $('.otheer').addClass('hidden')
             }
 
             if ($(this).attr('id') === 'other') {
@@ -36,7 +36,7 @@ export default class extends Controller {
 
             setTimeout(function () {
                 $('#clear-skills').removeClass('clear-skills');
-            }, 200)
+            }, 500)
 
         })
     }

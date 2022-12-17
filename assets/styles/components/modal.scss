@@ -140,3 +140,19 @@
     }
   }
 }
+
+@media (max-width: 860px) {
+  #contact-description {
+    display: none;
+  }
+
+  #my-modal {
+    .row {
+      flex-direction: column !important;
+    }
+
+    .half-size {
+      max-width: 100% !important;
+    }
+  }
+}

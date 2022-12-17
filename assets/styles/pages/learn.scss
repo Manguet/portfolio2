@@ -35,19 +35,38 @@
       background-color: $black;
       z-index: 2;
       border-radius: 12px;
+
+      .hidden {
+        display: none;
+      }
+
+      p {
+        font-style: italic;
+      }
     }
 
     #learn-img {
       width: 70%;
       height: 400px;
-      background-image: url("../../../public/images/vet.jpg");
+      background-image: url("../../../public/images/php.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      background-position-y: 50%;
       position: relative;
       top: 18vh;
       right: 7vw;
       z-index: 1;
       border-radius: 12px;
     }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #learn-img {
+    display: none !important;
+  }
+
+  #learn {
+    height: 100% !important;
   }
 }

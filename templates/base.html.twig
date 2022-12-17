@@ -13,7 +13,10 @@
         <meta property="og:site_name" content="Benjamin Manguet">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image:alt" content="image description">
-
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+        <link rel="manifest" href="/site.webmanifest">
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -27,7 +30,11 @@
 
         {% include 'base/menu.html.twig' %}
         {% include 'base/lines.html.twig' %}
-
+        {% for message in app.flashes('success') %}
+            <div class="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
         <div class="container" data-controller="mobileSphere">
 
             {% include 'base/header.html.twig' %}
@@ -40,5 +47,7 @@
             {% include 'base/footer.html.twig' %}
             {% include 'modal/contact.html.twig' %}
         </div>
+
+        <p class="version">v1.0.0</p>
     </body>
 </html>

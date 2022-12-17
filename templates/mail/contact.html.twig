@@ -1,0 +1,20 @@
+{% apply inky_to_html|inline_css(source('@styles/foundation-emails.css')) %}
+<html lang="fr">
+<head><title></title></head>
+
+<body>
+    <h1 class="text-center primary">Nouvelle demande de contact</h1>
+
+    <div>
+        <h2 class="text-center">Demande faite par : {% if data.firstname is defined %}{{ data.firstname }}{% endif %} {% if data.name is defined %}{{ data.name }}{% endif %}</h2>
+
+        {% if data.civility is defined %}<p>Il s'agit d'un {{ data.civility }}</p>{% endif %}
+        {% if data.contact is defined %}<p>Voici son adresse mail : {{ data.contact }}</p>{% endif %}
+        {% if data.phone is defined %}<p>Voici son numéro de téléphone : {{ data.phone }}</p>{% endif %}
+        {% if data.favorite is defined %}<p>La personne souhaite échanger par : {{ data.favorite }}</p>{% endif %}
+        {% if data.subject is defined %}<p>Voici son message : {{ data.subject }}</p>{% endif %}
+    </div>
+</body>
+
+</html>
+{% endapply %}
